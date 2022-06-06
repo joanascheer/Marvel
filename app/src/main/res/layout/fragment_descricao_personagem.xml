@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DescricaoPersonagemFragment"
+    android:layout_margin="@dimen/margin_16">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/Fragment1Constraint"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <ImageView
+        android:contentDescription="@string/imagem_de_personagem_marvel_desc"
+        android:id="@+id/iv_detalhe_personagem"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_125"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:src="@drawable/dr_estranho"
+        android:scaleType="centerCrop"/>
+
+        <TextView
+            android:id="@+id/tv_detalhe_nome_personagem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/iv_detalhe_personagem"
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="@string/nome_personagem_exemplo"
+            android:gravity="center"
+            android:textSize="@dimen/txt_size_18"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_margin="16dp"/>
+
+        <TextView
+            android:id="@+id/tv_detalhe_descricao_personagem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/txt_size_12"
+            app:layout_constraintTop_toBottomOf="@id/tv_detalhe_nome_personagem"
+            android:text="@string/descricao_personagem_exemplo"
+            android:layout_margin="@dimen/margin_16"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
