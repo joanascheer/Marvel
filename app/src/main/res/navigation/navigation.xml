@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/navigation">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/listaPersonagensFragment2">
 
+    <fragment
+        android:id="@+id/listaPersonagensFragment2"
+        android:name="br.com.zup.marvel.fragments.ListaPersonagensFragment"
+        android:label="fragment_lista_personagens"
+        tools:layout="@layout/fragment_lista_personagens" >
+        <action
+            android:id="@+id/action_listaPersonagensFragment2_to_descricaoPersonagemFragment2"
+            app:destination="@id/descricaoPersonagemFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/descricaoPersonagemFragment2"
+        android:name="br.com.zup.marvel.fragments.DescricaoPersonagemFragment"
+        android:label="fragment_descricao_personagem"
+        tools:layout="@layout/fragment_descricao_personagem" />
 </navigation>
